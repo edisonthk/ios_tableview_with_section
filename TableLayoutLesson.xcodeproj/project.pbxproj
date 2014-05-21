@@ -22,6 +22,8 @@
 		415219D3192A79190004EB90 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 415219B7192A79190004EB90 /* CoreData.framework */; };
 		415219DB192A79190004EB90 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 415219D9192A79190004EB90 /* InfoPlist.strings */; };
 		415219DD192A79190004EB90 /* TableLayoutLessonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 415219DC192A79190004EB90 /* TableLayoutLessonTests.m */; };
+		415219E8192B27170004EB90 /* MWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415219E7192B27170004EB90 /* MWTableViewController.m */; };
+		415219EA192B273D0004EB90 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415219E9192B273D0004EB90 /* main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		415219D8192A79190004EB90 /* TableLayoutLessonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableLayoutLessonTests-Info.plist"; sourceTree = "<group>"; };
 		415219DA192A79190004EB90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		415219DC192A79190004EB90 /* TableLayoutLessonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableLayoutLessonTests.m; sourceTree = "<group>"; };
+		415219E6192B27170004EB90 /* MWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTableViewController.h; sourceTree = "<group>"; };
+		415219E7192B27170004EB90 /* MWTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTableViewController.m; sourceTree = "<group>"; };
+		415219E9192B273D0004EB90 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,9 @@
 			children = (
 				415219C2192A79190004EB90 /* MWAppDelegate.h */,
 				415219C3192A79190004EB90 /* MWAppDelegate.m */,
+				415219E6192B27170004EB90 /* MWTableViewController.h */,
+				415219E7192B27170004EB90 /* MWTableViewController.m */,
+				415219E9192B273D0004EB90 /* main.storyboard */,
 				415219C8192A79190004EB90 /* Images.xcassets */,
 				415219C5192A79190004EB90 /* TableLayoutLesson.xcdatamodeld */,
 				415219BA192A79190004EB90 /* Supporting Files */,
@@ -230,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				415219BE192A79190004EB90 /* InfoPlist.strings in Resources */,
+				415219EA192B273D0004EB90 /* main.storyboard in Resources */,
 				415219C9192A79190004EB90 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				415219C4192A79190004EB90 /* MWAppDelegate.m in Sources */,
+				415219E8192B27170004EB90 /* MWTableViewController.m in Sources */,
 				415219C7192A79190004EB90 /* TableLayoutLesson.xcdatamodeld in Sources */,
 				415219C0192A79190004EB90 /* main.m in Sources */,
 			);
