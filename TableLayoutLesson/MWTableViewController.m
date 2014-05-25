@@ -10,7 +10,8 @@
 
 @interface MWTableViewController ()
 
-@property NSDictionary* items;
+@property NSMutableDictionary* items;
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
 
@@ -33,28 +34,33 @@
     
 }
 
-NSArray* itemSectionTitles;
 
 - (void) loadInitialData
 {
-    self.items = @{@"B" : @[@"Bear", @"Black Swan", @"Buffalo"],
-                   @"C" : @[@"Camel", @"Cockatoo"],
-                   @"D" : @[@"Dog", @"Donkey"],
-                   @"E" : @[@"Emu"],
-                   @"G" : @[@"Giraffe", @"Greater Rhea"],
-                   @"H" : @[@"Hippopotamus", @"Horse"],
-                   @"K" : @[@"Koala"],
-                   @"L" : @[@"Lion", @"Llama"],
-                   @"M" : @[@"Manatus", @"Meerkat"],
-                   @"P" : @[@"Panda", @"Peacock", @"Pig", @"Platypus", @"Polar Bear"],
-                   @"R" : @[@"Rhinoceros"],
-                   @"S" : @[@"Seagull"],
-                   @"T" : @[@"Tasmania Devil"],
-                   @"W" : @[@"Whale", @"Whale Shark", @"Wombat"]
-                   
-                };
+//    self.items = @{@"B" : @[@"Bear", @"Black Swan", @"Buffalo"],
+//                   @"C" : @[@"Camel", @"Cockatoo"],
+//                   @"D" : @[@"Dog", @"Donkey"],
+//                   @"E" : @[@"Emu"],
+//                   @"G" : @[@"Giraffe", @"Greater Rhea"],
+//                   @"H" : @[@"Hippopotamus", @"Horse"],
+//                   @"K" : @[@"Koala"],
+//                   @"L" : @[@"Lion", @"Llama"],
+//                   @"M" : @[@"Manatus", @"Meerkat"],
+//                   @"P" : @[@"Panda", @"Peacock", @"Pig", @"Platypus", @"Polar Bear"],
+//                   @"R" : @[@"Rhinoceros"],
+//                   @"S" : @[@"Seagull"],
+//                   @"T" : @[@"Tasmania Devil"],
+//                   @"W" : @[@"Whale", @"Whale Shark", @"Wombat"]
+//                   
+//                };
     
-    itemSectionTitles = [[self.items allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    NSArray* items = @[@"Bear", @"Black Swan"];
+    
+    self.items = [[NSMutableDictionary alloc]init];
+    [self.items setObject:items forKey:@"B"];
+    [self.items setObject:items forKey:@"C"];
+
+
     
 }
 
@@ -68,12 +74,17 @@ NSArray* itemSectionTitles;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+        NSArray* itemSectionTitles = [self.items allKeys];
+    
     return [itemSectionTitles count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+        NSArray* itemSectionTitles = [self.items allKeys];
+    
+    
     NSString *sectionTitle = [itemSectionTitles objectAtIndex:section];
     NSArray *sectionItems = [self.items objectForKey:sectionTitle];
     return [sectionItems count];
@@ -86,6 +97,8 @@ NSArray* itemSectionTitles;
     static NSString* reuseIdentifier = @"reuseIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
+    NSArray* itemSectionTitles = [self.items allKeys];
+    
     // Return the number of rows in the section.
     NSString *sectionTitle = [itemSectionTitles objectAtIndex:indexPath.section];
     NSArray *sectionItems = [self.items objectForKey:sectionTitle];
@@ -97,12 +110,29 @@ NSArray* itemSectionTitles;
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
+    NSArray* itemSectionTitles = [self.items allKeys];
     return [itemSectionTitles objectAtIndex:section];
 }
+
+int cnt = 0;
 
 - (void)tableView:(UITableView*) tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"selected section:%d  row:%d",indexPath.section,indexPath.row);
+    
+    cnt ++;
+    
+    NSString* key = [NSString stringWithFormat:@"%d", cnt];
+    
+    NSArray* mvitems = @[@"one",@"two"];
+    [self.items setObject:mvitems forKey:key];
+    
+    
+    NSLog(@"%@",[self.items objectForKey:@"B"]);
+    
+    
+    
+    [self.myTableView reloadData];
     
 }
 
