@@ -24,6 +24,7 @@
 		415219DD192A79190004EB90 /* TableLayoutLessonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 415219DC192A79190004EB90 /* TableLayoutLessonTests.m */; };
 		415219E8192B27170004EB90 /* MWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 415219E7192B27170004EB90 /* MWTableViewController.m */; };
 		415219EA192B273D0004EB90 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415219E9192B273D0004EB90 /* main.storyboard */; };
+		4182389719320FC6005202E2 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 4182389619320FC6005202E2 /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		415219E6192B27170004EB90 /* MWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTableViewController.h; sourceTree = "<group>"; };
 		415219E7192B27170004EB90 /* MWTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTableViewController.m; sourceTree = "<group>"; };
 		415219E9192B273D0004EB90 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		4182389619320FC6005202E2 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		415219A5192A79190004EB90 = {
 			isa = PBXGroup;
 			children = (
+				4182389619320FC6005202E2 /* readme.md */,
 				415219B9192A79190004EB90 /* TableLayoutLesson */,
 				415219D6192A79190004EB90 /* TableLayoutLessonTests */,
 				415219B0192A79190004EB90 /* Frameworks */,
@@ -239,6 +242,7 @@
 			files = (
 				415219BE192A79190004EB90 /* InfoPlist.strings in Resources */,
 				415219EA192B273D0004EB90 /* main.storyboard in Resources */,
+				4182389719320FC6005202E2 /* readme.md in Resources */,
 				415219C9192A79190004EB90 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +464,7 @@
 				415219E2192A79190004EB90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		415219E3192A79190004EB90 /* Build configuration list for PBXNativeTarget "TableLayoutLessonTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +473,7 @@
 				415219E5192A79190004EB90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
